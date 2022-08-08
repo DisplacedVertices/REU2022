@@ -1,0 +1,15 @@
+All codes parse the following variables: folder, file (without .root extension), tau (in um), and mass (in GeV). The code reads the file /nfs/cms/mc1/reu2022/[folder]/[file].root. ovn.py is an exception that needs two folder inputs for the old and new vertexing algorithms.
+
+The codes themselves begin with a list of boolean variables to specify which plots should be printed. All code prints a statment "begin" + folder/filename to confirm code is running. All variables are defined at the beginning of code, before the first function definition or for-loop. Common variables include:
+bins - number of bins for every histogram made in code
+end - x-axis maximum for plots made for 2D variables (dBV, dVV)
+end3D - x-axis maximum for plots made for 3D variables (dBV3D, dVV3D)
+
+fourvec.py - plots histograms of masses, lab frame and rest frame displacements, and ratios of various variables.
+3D.py - specifically for comparing transverse and 3D variables (e.g dBV and dBV3D which is the true 3D displacement) and the distribution of angles in the sample.
+ovn.py - plots old vs new vertexing algorithm.
+cut.py - specifically for looking at efficiencies with different bs2derr cuts.
+eff.py - plots efficiencies for a number of variables. Also plots 2D histograms of generated vs reconstructed data.
+ULtest.py - specifically for creating plots to diagnose the problem with the UL decay distances.
+ul_vs_pl.py - also created to look into UL samples. Plots ultra legacy and pre legacy data on the same graph for comparison.
+
